@@ -51,7 +51,7 @@ extension RAMAnimatedTabBarItem {
 }
 
 /// UITabBarItem with animation
-open class RAMAnimatedTabBarItem: UITabBarItem {
+@objc open class RAMAnimatedTabBarItem: UITabBarItem {
   
   @IBInspectable open var yOffSet: CGFloat = 0
   
@@ -170,7 +170,7 @@ extension  RAMAnimatedTabBarController {
    - parameter from: Index for unselected animation
    - parameter to:   Index for selected animation
    */
-  open func setSelectIndex(from: Int, to: Int) {
+   open func setSelectIndex(from: Int, to: Int) {
     selectedIndex = to
     guard let items = tabBar.items as? [RAMAnimatedTabBarItem] else {
       fatalError("items must inherit RAMAnimatedTabBarItem")
